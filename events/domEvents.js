@@ -1,0 +1,11 @@
+
+const domEvents = (user) => {
+
+};
+// CLICK EVENT FOR SHOWING FORM FOR CREATING A WORD
+
+// CLICK EVENT EDITING/UPDATING A WORD
+
+// CLICK EVENT FOR DELETING A WORD
+
+export default domEvents;
