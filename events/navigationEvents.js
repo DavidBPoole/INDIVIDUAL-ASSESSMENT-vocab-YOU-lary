@@ -1,6 +1,3 @@
-
-
-
 // NAVIGATION EVENTS
 const navEvents = (user) => {
 

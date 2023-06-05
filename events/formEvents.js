@@ -1,5 +1,3 @@
-
-
 // TODO: CLICK EVENT FOR SUBMITTING FORM FOR ADDING A WORD CARD
 const formEvents = (user) => {
 
