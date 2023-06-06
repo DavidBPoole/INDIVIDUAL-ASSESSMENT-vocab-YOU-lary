@@ -1,10 +1,32 @@
+import { deleteWord, getSingleWord, getWords } from '../api/wordData';
+import addWordForm from '../components/forms/addWordForm';
+import { showWords } from '../pages/words';
+
 const domEvents = (user) => {
+  document.querySelector('#main-container').addEventListener('click', (e) => {
+    // CLICK EVENT FOR SHOWING FORM FOR CREATING A WORD
+    if (e.target.id.includes('add-word-btn')) {
+      addWordForm({}, user);
+    }
+    // CLICK EVENT EDITING/UPDATING A WORD
+    if (e.target.id.includes('edit-word-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
 
+      getSingleWord(firebaseKey).then((wordObj) => addWordForm(wordObj, user));
+    }
+    // CLICK EVENT FOR DELETING A WORD
+    if (e.target.id.includes('delete-word')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Want to delete this?')) {
+        // console.warn('CLICKED DELETE BOOK', e.target.id);
+        const [, firebaseKey] = e.target.id.split('--');
+
+        deleteWord(firebaseKey).then(() => {
+          getWords(user.uid).then(showWords);
+        });
+      }
+    }
+  });
 };
-// CLICK EVENT FOR SHOWING FORM FOR CREATING A WORD
-
-// CLICK EVENT EDITING/UPDATING A WORD
-
-// CLICK EVENT FOR DELETING A WORD
 
 export default domEvents;

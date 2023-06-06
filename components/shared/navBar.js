@@ -16,6 +16,9 @@ const navBar = () => {
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#" id="allWords">All</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#" id="navHtml">HTML</a>
             </li>
             <li class="nav-item">
