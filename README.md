@@ -21,4 +21,4 @@ In this project we were tasked with writing code that demonstrated basic abiliti
 - [Project Board](#https://dbdiagram.io/d/647cdf33722eb774945e6d00)
 
 ## Contributors
-- [YOUR NAME](https://github.com/DavidBPoole)
+- [David Poole](https://github.com/DavidBPoole)
