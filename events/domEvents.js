@@ -17,8 +17,8 @@ const domEvents = (user) => {
     // CLICK EVENT FOR DELETING A WORD
     if (e.target.id.includes('delete-word')) {
       // eslint-disable-next-line no-alert
-      if (window.confirm('Want to delete this?')) {
-        // console.warn('CLICKED DELETE BOOK', e.target.id);
+      if (window.confirm('Want to delete this word?')) {
+        // console.warn('CLICKED DELETE WORD', e.target.id);
         const [, firebaseKey] = e.target.id.split('--');
 
         deleteWord(firebaseKey).then(() => {

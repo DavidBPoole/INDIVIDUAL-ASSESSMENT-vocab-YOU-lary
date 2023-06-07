@@ -79,7 +79,7 @@ const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
 
 // FILTER JAVASCRIPT WORDS
 const filterJsWords = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?OrderBy="uid"&equalTo="${uid}"`, {
+  fetch(`${endpoint}/entries.json?OrderBy="language"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
