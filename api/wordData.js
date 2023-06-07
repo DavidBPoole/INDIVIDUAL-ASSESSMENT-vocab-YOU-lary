@@ -77,27 +77,6 @@ const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// FILTER JAVASCRIPT WORDS
-const filterJsWords = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="Javascript"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data) {
-        const javascript = Object.values(data);
-        const filteredWords = javascript.filter((item) => item.language === 'Javascript');
-        resolve(filteredWords);
-      } else {
-        resolve([]);
-      }
-    })
-    .catch(reject);
-});
-
 // FILTER HTML WORDS
 const filterHtmlWords = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="HTML"`, {
@@ -132,6 +111,27 @@ const filterCssWords = () => new Promise((resolve, reject) => {
       if (data) {
         const css = Object.values(data);
         const filteredWords = css.filter((item) => item.language === 'CSS');
+        resolve(filteredWords);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+// FILTER JAVASCRIPT WORDS
+const filterJsWords = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="Javascript"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        const javascript = Object.values(data);
+        const filteredWords = javascript.filter((item) => item.language === 'Javascript');
         resolve(filteredWords);
       } else {
         resolve([]);

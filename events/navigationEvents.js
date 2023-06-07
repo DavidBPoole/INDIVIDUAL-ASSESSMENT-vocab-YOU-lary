@@ -7,14 +7,14 @@ import { showWords } from '../pages/words';
 
 // navigation events
 const navigationEvents = (user) => {
-  // LOGOUT BUTTON
-  document.querySelector('#logout-button')
-    .addEventListener('click', signOut);
+  // ALL WORDS ON LOGO
+  document.querySelector('#logo').addEventListener('click', () => {
+    getWords(user.uid).then(showWords);
+  });
 
-  // JAVASCRIPT WORDS
-  document.querySelector('#navJavascript').addEventListener('click', () => {
-    // console.warn('CLICKED SALE BOOKS');
-    filterJsWords(user.uid).then(showWords);
+  // ALL WORDS
+  document.querySelector('#allWords').addEventListener('click', () => {
+    getWords(user.uid).then(showWords);
   });
 
   // HTML WORDS
@@ -29,10 +29,15 @@ const navigationEvents = (user) => {
     filterCssWords(user.uid).then(showWords);
   });
 
-  // ALL WORDS
-  document.querySelector('#allWords').addEventListener('click', () => {
-    getWords(user.uid).then(showWords);
+  // JAVASCRIPT WORDS
+  document.querySelector('#navJavascript').addEventListener('click', () => {
+    // console.warn('CLICKED SALE BOOKS');
+    filterJsWords(user.uid).then(showWords);
   });
+
+  // LOGOUT BUTTON
+  document.querySelector('#logout-button')
+    .addEventListener('click', signOut);
 };
 
 export default navigationEvents;

@@ -1,5 +1,6 @@
 import { createWord, getWords, updateWord } from '../api/wordData';
 import { showWords } from '../pages/words';
+import timestamp from '../utils/timestamp';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -11,6 +12,7 @@ const formEvents = (user) => {
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#language').value,
         uid: user.uid,
+        time: timestamp
       };
 
       createWord(payload).then(({ name }) => {
@@ -21,7 +23,7 @@ const formEvents = (user) => {
         });
       });
     }
-
+    // CLICK EVENT FOR EDITING A WORD
     if (e.target.id.includes('update-word')) {
       const [, firebaseKey] = e.target.id.split('--');
       console.warn('CLICKED UPDATE WORD', e.target.id);
@@ -31,6 +33,7 @@ const formEvents = (user) => {
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#language').value,
         firebaseKey,
+        time: `${Date.now()}`,
       };
       updateWord(payload).then(() => {
         getWords(user.uid).then(showWords);
@@ -38,7 +41,5 @@ const formEvents = (user) => {
     }
   });
 };
-
-// CLICK EVENT FOR EDITING A WORD
 
 export default formEvents;
