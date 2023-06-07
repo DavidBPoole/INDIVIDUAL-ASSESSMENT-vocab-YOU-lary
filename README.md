@@ -4,7 +4,7 @@
 # Overview
 In this project we were tasked with writing code that demonstrated basic abilities through javascript to create, read, update, and delete (CRUD) vocabulary words pulling from a database, creating on site and then storing in a persistant databse. Users may authenticate upon login so only their vocabulary word data may be viewed, created, read, updated, deleted or stored for later use.
 
-[View App](#https://davidpoole-vocab-you-lary.netlify.app)
+[View App](https://davidpoole-vocab-you-lary.netlify.app)
 
 ## About the User
 - The ideal user for this application is a student
