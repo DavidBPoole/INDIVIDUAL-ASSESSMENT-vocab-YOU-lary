@@ -78,8 +78,8 @@ const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 // FILTER JAVASCRIPT WORDS
-const filterJsWords = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?OrderBy="language"&equalTo="${uid}"`, {
+const filterJsWords = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="Javascript"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -99,8 +99,8 @@ const filterJsWords = (uid) => new Promise((resolve, reject) => {
 });
 
 // FILTER HTML WORDS
-const filterHtmlWords = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?OrderBy="uid"&equalTo="${uid}"`, {
+const filterHtmlWords = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="HTML"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -120,8 +120,8 @@ const filterHtmlWords = (uid) => new Promise((resolve, reject) => {
 });
 
 // FILTER CSS WORDS
-const filterCssWords = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?OrderBy="uid"&equalTo="${uid}"`, {
+const filterCssWords = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="CSS"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
