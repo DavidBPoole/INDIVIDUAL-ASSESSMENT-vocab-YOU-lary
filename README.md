@@ -21,6 +21,7 @@ In this project we were tasked with writing code that demonstrated basic abiliti
 - [Project Board](https://dbdiagram.io/d/647cdf33722eb774945e6d00)
 
 ## Project Screenshot
+![Screenshot 2023-06-10 at 9 32 59 AM](https://github.com/DavidBPoole/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/assets/127453405/ff2a8bb4-6c8e-4546-bd8f-5f48ed00b766)
 
 ## Contributors
 - [David Poole](https://github.com/DavidBPoole)
