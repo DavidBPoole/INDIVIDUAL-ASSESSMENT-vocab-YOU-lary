@@ -20,7 +20,7 @@ const showWords = (array) => {
       <div class="card-body">
         <h2 class="card-title">${item.title}</h2>
         <hr>
-        <h4 class="card-subtitle mb-2 text-muted">${item.language}</h4>
+        <h4 class="card-subtitle mb-2 text-muted"><i>${item.language}</i></h4>
         <hr>
         <h7 class="card-subtitle mb-2 text-muted">${item.definition}</h7>
         <hr>
