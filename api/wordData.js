@@ -1,9 +1,9 @@
-// import client from '../utils/client';
+import client from '../utils/client';
 // API CALLS FOR WORDS
 // PROMISES GO ON THIS PAGE
 
-// const endpoint = client.databaseURL;
-const endpoint = 'https://vocab-you-lary-c91e1-default-rtdb.firebaseio.com/';
+const endpoint = client.databaseURL;
+// const endpoint = 'https://vocab-you-lary-c91e1-default-rtdb.firebaseio.com/';
 
 // CREATE WORD
 const createWord = (payload) => new Promise((resolve, reject) => {
@@ -80,7 +80,7 @@ const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
 
 // FILTER HTML WORDS
 const filterHtmlWords = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="HTML"&orderBy="uid"&equalTo="${uid}"`, {
+  fetch(`${endpoint}/entries.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ const filterHtmlWords = (uid) => new Promise((resolve, reject) => {
 
 // FILTER CSS WORDS
 const filterCssWords = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="CSS"&orderBy="uid"&equalTo="${uid}"`, {
+  fetch(`${endpoint}/entries.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ const filterCssWords = (uid) => new Promise((resolve, reject) => {
 
 // FILTER JAVASCRIPT WORDS
 const filterJsWords = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entries.json?orderBy="language"&equalTo="Javascript"&orderBy="uid"&equalTo="${uid}"`, {
+  fetch(`${endpoint}/entries.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
