@@ -16,9 +16,9 @@ In this project we were tasked with writing code that demonstrated basic abiliti
 - Ability to create, read, update, and delete word data
 
 ## Relevant Links
-- [Check out the deployed site](#https://davidpoole-vocab-you-lary.netlify.app)
-- [Wireframes](#https://www.figma.com/file/fVuOGX2frNFvwFI3BEoO7Q/VocabYOUlary?type=design&node-id=0-1&t=UkpK5SyljQQFoU74-0)
-- [Project Board](#https://dbdiagram.io/d/647cdf33722eb774945e6d00)
+- [Check out the deployed site](https://davidpoole-vocab-you-lary.netlify.app)
+- [Wireframes](https://www.figma.com/file/fVuOGX2frNFvwFI3BEoO7Q/VocabYOUlary?type=design&node-id=0-1&t=UkpK5SyljQQFoU74-0)
+- [Project Board](https://dbdiagram.io/d/647cdf33722eb774945e6d00)
 
 ## Contributors
 - [David Poole](https://github.com/DavidBPoole)

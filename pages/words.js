@@ -18,11 +18,11 @@ const showWords = (array) => {
     <div class="word-container">
     <div class="card">
       <div class="card-body">
-        <h3 class="card-title">${item.title}</h3>
-        <hr>
-        <h7 class="card-subtitle mb-2 text-muted">${item.definition}</h7>
+        <h2 class="card-title">${item.title}</h2>
         <hr>
         <h4 class="card-subtitle mb-2 text-muted">${item.language}</h4>
+        <hr>
+        <h7 class="card-subtitle mb-2 text-muted">${item.definition}</h7>
         <hr>
         <div class="btn btn-info" id="edit-word-btn--${item.firebaseKey}">Edit</div>
         <div class="btn btn-danger" id="delete-word-btn--${item.firebaseKey}">Delete</div>
