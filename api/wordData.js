@@ -1,8 +1,9 @@
-import client from '../utils/client';
+// import client from '../utils/client';
 // API CALLS FOR WORDS
 // PROMISES GO ON THIS PAGE
 
-const endpoint = client.databaseURL;
+// const endpoint = client.databaseURL;
+const endpoint = 'https://vocab-you-lary-c91e1-default-rtdb.firebaseio.com/';
 
 // CREATE WORD
 const createWord = (payload) => new Promise((resolve, reject) => {
