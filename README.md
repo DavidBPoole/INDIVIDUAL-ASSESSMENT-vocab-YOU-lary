@@ -20,5 +20,7 @@ In this project we were tasked with writing code that demonstrated basic abiliti
 - [Wireframes](https://www.figma.com/file/fVuOGX2frNFvwFI3BEoO7Q/VocabYOUlary?type=design&node-id=0-1&t=UkpK5SyljQQFoU74-0)
 - [Project Board](https://dbdiagram.io/d/647cdf33722eb774945e6d00)
 
+## Project Screenshot
+
 ## Contributors
 - [David Poole](https://github.com/DavidBPoole)
