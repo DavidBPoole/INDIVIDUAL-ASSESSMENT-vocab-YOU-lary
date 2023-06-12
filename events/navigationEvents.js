@@ -47,6 +47,16 @@ const navigationEvents = (user) => {
     filterJsWords(user.uid).then(showWords);
   });
 
+  // SEARCH BAR
+  const search = (event) => {
+    const lowerCase = event.target.value.toLowerCase();
+    getWords(user.uid).then((data) => {
+      const searchTitle = Object.values(data).filter((item) => item.title.toLowerCase().includes(lowerCase));
+      return searchTitle;
+    }).then(showWords);
+  };
+  document.querySelector('#search').addEventListener('keyup', search);
+
   // LOGOUT BUTTON
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
