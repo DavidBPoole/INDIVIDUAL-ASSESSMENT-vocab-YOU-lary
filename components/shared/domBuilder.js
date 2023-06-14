@@ -7,6 +7,8 @@ const domBuilder = () => {
   <h1>Welcome to Vocab-YOU-lary!</h1>
   <h6>Where you can create, update, delete and store your vocabulary words in a persistent online database unique to YOU!</h6>
     <div id="add-button"></div>
+    <div id="sort"></div>
+    <hr>
     <div id="form-container"></div>
     <div id="word-bank"></div>
     <div id="view"></div>
